@@ -73,3 +73,12 @@ button {
   bottom: 10%;
   right: 10%;
 }
+
+#git-code {
+  position: fixed;
+  bottom: 5%;
+  left: 10%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 10px;
+  color: #201749;
+}
