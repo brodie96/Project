@@ -22,10 +22,8 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="card bg-dark text-black">
-        <img src="images/sunny.png" class="card-img" alt="Sunshine" />
-        <div class="card-img-overlay">
+    <div class="container" id="weather-app">
+          <button id="current-location" type="button">Current</button>
           <h1 class="card-title" id="current-city">City, Country</h1>
           <h2 class="card-text" id="current-day">Day</h2>
           <div class="card-text">
@@ -38,54 +36,47 @@
               >
             </div>
             <div class="weather" id="weather">Weather</div>
+            <div class="current-weather" id="current-weather">☀️</div>
             <div class="humidity">Humidity: <span id="humidity">10%</span></div>
 
-            <div class="wind">Wind: <span id="wind-speed">5mph</span></div>
+            <div class="wind">Wind: <span id="wind-speed">5km/h</span></div>
 
-            <div class="row" style="width: 20%">
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Saturday<br />
+            <div class="row">
+              <div >
+                <div class="col-12" id="forecast-1">
+                  Sat<br />
                   ☀️
                 </div>
               </div>
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Sunday <br />
+              <div >
+                <div class="col-12" id="forecast-2">
+                  Sun <br />
                   🌧
                 </div>
               </div>
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Monday <br />
+              <div >
+                <div class="col-12" id="forecast-3">
+                  Mon <br />
                   ☀️
                 </div>
               </div>
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Tuesday <br />
+              <div>
+                <div class="col-12" id="forecast-4">
+                  Tue <br />
                   💨
                 </div>
               </div>
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Wednesday <br />
+              <div >
+                <div class="col-12" id="forecast-5">
+                  Wed <br />
                   ⛅️
                 </div>
               </div>
-              <div class="border border-3 border-primary">
-                <div class="col-12">
-                  Thursday <br />
-                  ❄️
-                </div>
-              </div>
+              
             </div>
-            <button id="current-location" type="button" class="btn btn-success">
-              Current
-            </button>
             <form>
               <input type="search" placeholder="Search City" id="search-city" />
-              <input type="submit" value="Go!" />
+              <input type="submit" value="Go!" id="go-button"/>
             </form>
             <div id="git-code">
               <a href="https://github.com/brodie96/Weather-App" target="_blank"

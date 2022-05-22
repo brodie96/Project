@@ -54,7 +54,7 @@ function showData(request) {
   let weather = document.querySelector("#weather");
   weather.innerHTML = `${request.data.weather[0].main}`;
   let wind = document.querySelector("#wind-speed");
-  wind.innerHTML = `${request.data.wind.speed} m/s`;
+  wind.innerHTML = `${request.data.wind.speed} km/h`;
 }
 
 function getTemperature(city) {
