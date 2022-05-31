@@ -55,6 +55,12 @@ function showData(request) {
   weather.innerHTML = `${request.data.weather[0].main}`;
   let wind = document.querySelector("#wind-speed");
   wind.innerHTML = `${request.data.wind.speed} km/h`;
+  let weatherIcon = document.querySelector("#current-weather");
+  console.log(weatherIcon);
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${request.data.weather[0].icon}@2x.png`
+  );
 }
 
 function getTemperature(city) {
@@ -90,23 +96,8 @@ search.addEventListener("submit", searchCity);
 let current = document.querySelector("#current-location");
 current.addEventListener("click", getLocation);
 
-//degrees change
-
-//function currentTemp() {
-//let celsius = document.querySelector("#degrees-celsius");
-// if (celsius.innerHTML === "22ºC") {
-// celsius.innerHTML = "ºC";
-//} else {
-//celsius.innerHTML = "22ºC";
-//}
+//function degreesFahrenheit(event) {
+//event.preventDefault();
 
 //let fahrenheit = document.querySelector("#degrees-fahrenheit");
-//if (fahrenheit.innerHTML === "72ºF") {
-//fahrenheit.innerHTML = "ºF";
-//} else {
-//fahrenheit.innerHTML = "72ºF";
-//}
-//}
-
-//let temp = document.querySelector("#current-temp");
-//temp.addEventListener("click", currentTemp);
+//fahrenheit.addEventListener("click", degreesFahrenheit);
