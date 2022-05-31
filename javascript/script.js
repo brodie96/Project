@@ -45,8 +45,8 @@ console.log(`${day}  ${date} ${month}  ${hour}:${minutes}`);
 function showData(request) {
   let temperature = Math.round(request.data.main.temp);
   console.log(request);
-  let degrees = document.querySelector("#degrees-celsius");
-  degrees.innerHTML = `${temperature}ºC`;
+  let degrees = document.querySelector("#temp-number");
+  degrees.innerHTML = `${temperature}`;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = `${request.data.name}, ${request.data.sys.country}`;
   let humidity = document.querySelector("#humidity");
@@ -61,6 +61,7 @@ function showData(request) {
     "src",
     `http://openweathermap.org/img/wn/${request.data.weather[0].icon}@2x.png`
   );
+  celsiusTemperature = request.data.main.temp;
 }
 
 function getTemperature(city) {
@@ -96,8 +97,27 @@ search.addEventListener("submit", searchCity);
 let current = document.querySelector("#current-location");
 current.addEventListener("click", getLocation);
 
-//function degreesFahrenheit(event) {
-//event.preventDefault();
+function degreesFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitCalculation = (celsiusTemperature * 9) / 5 + 32;
+  celsiusTemp.classList.remove("active");
+  fahrenheitTemp.classList.add("active");
+  let temperatureElement = document.querySelector("#temp-number");
+  temperatureElement.innerHTML = Math.round(fahrenheitCalculation);
+}
 
-//let fahrenheit = document.querySelector("#degrees-fahrenheit");
-//fahrenheit.addEventListener("click", degreesFahrenheit);
+function degreesCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-number");
+  celsiusTemp.classList.add("active");
+  fahrenheitTemp.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitTemp = document.querySelector("#fahrenheit-temp");
+fahrenheitTemp.addEventListener("click", degreesFahrenheit);
+
+let celsiusTemp = document.querySelector("#celsius-temp");
+celsiusTemp.addEventListener("click", degreesCelsius);

@@ -38,6 +38,14 @@ h2 {
   font-size: 20px;
   line-height: 30px;
 }
+.active {
+  color: rgb(92, 131, 182);
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
 .weather {
   text-align: center;
   color: #1e56a0;
