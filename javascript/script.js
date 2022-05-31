@@ -41,7 +41,7 @@ if (hour < 10) {
 
 currentDay.innerHTML = `${day}  ${date} ${month}  ${hour}:${minutes}`;
 console.log(`${day}  ${date} ${month}  ${hour}:${minutes}`);
-
+//main
 function showData(request) {
   let temperature = Math.round(request.data.main.temp);
   console.log(request);
@@ -96,7 +96,7 @@ search.addEventListener("submit", searchCity);
 
 let current = document.querySelector("#current-location");
 current.addEventListener("click", getLocation);
-
+//unit conversion
 function degreesFahrenheit(event) {
   event.preventDefault();
   let fahrenheitCalculation = (celsiusTemperature * 9) / 5 + 32;
