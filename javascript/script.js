@@ -121,3 +121,46 @@ fahrenheitTemp.addEventListener("click", degreesFahrenheit);
 
 let celsiusTemp = document.querySelector("#celsius-temp");
 celsiusTemp.addEventListener("click", degreesCelsius);
+
+function showWeatherForecast() {
+  let weatherForecast = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row" id= "weather-forecast">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                  
+                     <div class="col-12" onmouseover="showForecastTemp()">
+                     <div class="weather-forecast-date">
+                      ${day}<br /></div>
+                         <img src="http://openweathermap.org/img/wn/10d@2x.png" width=30%/ class="forecast-icons"> <br/>
+                 
+                    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  weatherForecast.innerHTML = forecastHTML;
+}
+showWeatherForecast();
+
+function showForecastTemp() {
+  let weatherForecast = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row" id= "weather-forecast">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                  
+                     <div class="col-12" onmouseleave="showWeatherForecast()">
+                     <div class="weather-forecast-date">
+                      ${day}<br /></div>
+                        <span id="max-forecast-temp"> 18º</span>|<span id="min-forecast-temp">12º</span>
+                 
+                    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  weatherForecast.innerHTML = forecastHTML;
+}

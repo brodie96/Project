@@ -23,81 +23,51 @@
   </head>
   <body>
     <div class="container" id="weather-app">
-          <button id="current-location" type="button">Current</button>
-          <h1 class="card-title" id="current-city">Genova, IT</h1>
-          <h2 class="card-text" id="current-day">Day</h2>
-          <div class="card-text">
-            <div class="temperature" id="current-temp">
-              <strong 
-                ><span id="temp-number">19</span><span id="degrees-celsius" ><a href="#" id="celsius-temp" class="active">ºC</a></span>|<span
-                  id="degrees-fahrenheit" 
-                  ><a href="#" id="fahrenheit-temp">ºF</a></span
-                ></strong
-              >
-            </div>
-            <div class="weather" id="weather">Weather</div>
-            
-            <div class="current-weather"  ><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather image" id="current-weather"/></div>
-            <div class="humidity">Humidity: <span id="humidity">10%</span></div>
+      <button id="current-location" type="button">Current</button>
+      <h1 class="card-title" id="current-city">Genova, IT</h1>
+      <h2 class="card-text" id="current-day">Day</h2>
+      <div class="card-text">
+        <div class="temperature" id="current-temp">
+          <strong
+            ><span id="temp-number">19</span
+            ><span id="degrees-celsius"
+              ><a href="#" id="celsius-temp" class="active">ºC</a></span
+            >|<span id="degrees-fahrenheit"
+              ><a href="#" id="fahrenheit-temp">ºF</a></span
+            ></strong
+          >
+        </div>
+        <div class="weather" id="weather">Weather</div>
 
-            <div class="wind">Wind: <span id="wind-speed">5km/h</span></div>
+        <div class="current-weather">
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather image"
+            id="current-weather"
+          />
+        </div>
+        <div class="humidity">Humidity: <span id="humidity">10%</span></div>
 
-            <div class="row">
-              <div >
-                <div class="col-12" id="forecast-1">
-                  Sat<br />
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" width=60%/> <br/>
-                  <span claas="weather-forecast-temp-max"> 18º </span>
-                  <span class="weather-forecast-temp-min">12º</span>
-      
-                </div>
-              </div>
-              <div >
-                <div class="col-12" id="forecast-2">
-                  Sun <br />
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" width=60%/><br/>
-                  <span claas="weather-forecast-temp-max">18º</span>
-                  <span class="weather-forecast-temp-min">12º</span>
+        <div class="wind">Wind: <span id="wind-speed">5km/h</span></div>
 
-
-                </div>
-              </div>
-              <div >
-                <div class="col-12" id="forecast-3">
-                  Mon <br />
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" width=60%/><br/>
-                  <span claas="weather-forecast-temp-max">18º</span>
-                  <span class="weather-forecast-temp-min">12º</span>
-                </div>
-              </div>
-              <div>
-                <div class="col-12" id="forecast-4">
-                  Tue <br />
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" width=60%/><br/>
-                  <span claas="weather-forecast-temp-max">18º</span>
-                  <span class="weather-forecast-temp-min">12º</span>
-                </div>
-              </div>
-              <div >
-                <div class="col-12" id="forecast-5">
-                  Wed <br />
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" width=60%/><br/>
-                  <span claas="weather-forecast-temp-max">18º</span>
-                  <span class="weather-forecast-temp-min">12º</span>
-                </div>
-              </div>
-              
-            </div>
-            <form>
-              <input type="search" placeholder="Search City" id="search-city" />
-              <input type="submit" value="Go!" id="go-button"/>
-            </form>
-            <div id="git-code">
-              <a href="https://github.com/brodie96/Weather-App" target="_blank"
-                >Open-Source Code </a
-              >by Rebecca Brodie
+        <div class="row" id="weather-forecast">
+          <div>
+            <div class="col-12">
+              <div class="weather-forecast-date">Sat<br /></div>
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" width=30%/
+              class="forecast-icons"> <br />
             </div>
           </div>
+        </div>
+
+        <form>
+          <input type="search" placeholder="Search City" id="search-city" />
+          <input type="submit" value="Go!" id="go-button" />
+        </form>
+        <div id="git-code">
+          <a href="https://github.com/brodie96/Weather-App" target="_blank"
+            >Open-Source Code </a
+          >by Rebecca Brodie
         </div>
       </div>
     </div>
