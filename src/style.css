@@ -83,7 +83,7 @@ h2 {
   font-size: 15px;
   line-height: 25px;
   color: #1e56a0;
-
+  position: relative;
   border: 1px solid #170568;
   border-radius: 10px;
 }
@@ -91,6 +91,19 @@ h2 {
 .forecast-icons {
   text-align: center;
   margin: auto 0;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+.span1 {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.span2 {
+  position: absolute;
+  top: 40%;
+  right: 15%;
 }
 
 form {
