@@ -79,7 +79,8 @@ function showData(request) {
     `http://openweathermap.org/img/wn/${request.data.weather[0].icon}@2x.png`
   );
   celsiusTemperature = request.data.main.temp;
-
+  celsiusTemp.classList.add("active");
+  fahrenheitTemp.classList.remove("active");
   getForecast(request.data.coord);
 }
 
@@ -140,6 +141,8 @@ fahrenheitTemp.addEventListener("click", degreesFahrenheit);
 
 let celsiusTemp = document.querySelector("#celsius-temp");
 celsiusTemp.addEventListener("click", degreesCelsius);
+
+//forecast
 
 function showWeatherForecast(response) {
   console.log(response.data.daily);
